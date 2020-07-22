@@ -17,11 +17,11 @@ Here are the list of improvements that I recommend for the future:
 This application requires you to install the following dependencies:
 - [Ruby v2.6.0](https://www.ruby-lang.org/en/downloads/)
 - [Bundler v1.17.2](https://bundler.io/)
-- [Rails v6.0.3.2] (https://edgeguides.rubyonrails.org/6_0_release_notes.html)
+- [Rails v6.0.3.2](https://edgeguides.rubyonrails.org/6_0_release_notes.html)
 - PostgreSQL v11.8
-- [Bootstrap v4.3] (https://gorails.com/forum/install-bootstrap-with-webpack-with-rails-6-beta)
+- [Bootstrap v4.3](https://gorails.com/forum/install-bootstrap-with-webpack-with-rails-6-beta)
 
-Here is a guide for installing the dependencies stated above, refer to the documentations linked above when you encounter problems in installing.
+Here is a guide for installing the dependencies stated above, refer to the documentations linked for each when you encounter problems in installing.
 
 - Install Homebrew (if you haven't already)
   ```
