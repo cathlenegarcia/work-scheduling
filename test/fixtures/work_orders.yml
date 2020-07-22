@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: MyString
+  duration: 9.99
+  time: 2020-07-19 17:27:51
+  location: one
+  technician: one
+
+two:
+  price: MyString
+  duration: 9.99
+  time: 2020-07-19 17:27:51
+  location: two
+  technician: two

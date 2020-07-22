@@ -1,0 +1,45 @@
+
+<h1>Schedule</h1>
+<%= javascript_pack_tag 'schedule' %>
+
+<table class="table table-bordered schedule">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"></th>
+      <% @technicians.each do |technician| %>
+        <th scope="col"><%= technician.name %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% work_orders = @work_orders.to_a %>
+    <% array_of_rowspan = array_of_rowspan_with_value %>
+    <% (6..16).each do |hour| %>
+      <tr>
+        <th scope="row"><%= hour < 9 ? "0#{hour}" : hour %>:00</th>
+        <% (1..@technicians.count).each do |i| %>
+          <% if order_in_cell?(work_orders, hour, i) %>
+            <td id="<%= i %>">
+              <b>Location:</b> <%= work_orders.first.location.name %>, 
+              <%= work_orders.first.location.city %><br/>
+              $<%= work_orders.first.price %><br/>
+              <b>Start Time:</b> <%= work_orders.first.time.strftime('%H:%M') %>
+              <b hidden>Duration: <%= work_orders.first.duration %></b>
+              <% work_orders.shift %>
+            </td>
+          <% else %>
+            <td class="alertSchedule" id="col-<%= i %>-row-<%= hour %>">
+            </td>
+          <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<% content_for :javascript, data: {} do %>
+  <script>
+    App.schedule.initEventListeners();
+  </script>
+<% end %>
