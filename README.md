@@ -51,7 +51,7 @@ Here is a guide for installing the dependencies stated above, refer to the docum
 
 - Configure App (see [Configuration](#configuration))
 
-- Setup PostgreSQL vagrant user
+- Setup PostgreSQL scheduling user
   ```
   $ createuser --pwprompt --interactive scheduling # use password 'scheduling'
   ```
